@@ -1,0 +1,4 @@
+FROM openjdk:17
+COPY ./out/artifacts/jobManager_war_exploded/WEB-INF/classes/com/company/jobManager/ /tmp
+WORKDIR /tmp
+ENTRYPOINT ["java","JobManagerApplication"]
